@@ -5,7 +5,7 @@ import * as fs from "async-file";
 const fileName = fileURLToPath(import.meta.url);
 const dirName = path.dirname(fileName);
 
-export class Cache {
+export default class Cache {
   private pathToFile!: string;
   private data!: { [key: string]: any };
 

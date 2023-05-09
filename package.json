@@ -1,7 +1,7 @@
 {
   "name": "kv-json-cache",
-  "version": "0.1.0",
-  "description": "kv persistent json storage",
+  "version": "0.1.1",
+  "description": "persistent kv json storage with async/await",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "type": "module",
@@ -26,6 +26,7 @@
   },
   "keywords": [
     "json cache",
+    "async/await",
     "key value",
     "cache"
   ],
