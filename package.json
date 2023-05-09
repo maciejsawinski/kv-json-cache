@@ -1,0 +1,52 @@
+{
+  "name": "kv-json-cache",
+  "version": "0.1.0",
+  "description": "kv persistent json storage",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "start": "node ./lib/index.js",
+    "build": "tsc -p .",
+    "dev": "ts-node ./src/index.ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejsawinski/kv-json-cache.git"
+  },
+  "keywords": [
+    "json cache",
+    "key value",
+    "cache"
+  ],
+  "author": {
+    "name": "Maciej Sawiński",
+    "url": "https://github.com/maciejsawinski"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejsawinski/kv-json-cache/issues"
+  },
+  "homepage": "https://github.com/maciejsawinski/kv-json-cache#readme",
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "async-file": "^2.0.2"
+  }
+}
